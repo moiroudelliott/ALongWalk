@@ -1,66 +1,67 @@
-# Installation de Go et exécution du programme
+Voici votre README mis à jour, sans les exemples et la conclusion :  
 
-## Installation de Go
+---
 
-Pour exécuter ce programme, vous devez d'abord installer Go (Golang) sur votre machine. Voici les étapes pour installer Go :
+# **Installation de Go et Exécution du Programme**
+
+## **Installation de Go**
+
+Pour exécuter ce programme, vous devez d'abord installer **Go (Golang)** sur votre machine. Voici les étapes pour l'installer :
 
 1. **Téléchargez Go** :
    - Rendez-vous sur le site officiel de Go : [https://golang.org/dl/](https://golang.org/dl/).
-   - Téléchargez la version appropriée pour votre système d'exploitation (Windows, macOS, Linux).
+   - Téléchargez la version correspondant à votre système d'exploitation (Windows, macOS, Linux).
 
 2. **Installez Go** :
-   - **Sur Windows** : Exécutez le fichier d'installation téléchargé et suivez les instructions de l'assistant d'installation.
-   - **Sur macOS** : Ouvrez le fichier `.pkg` téléchargé et suivez les instructions de l'assistant d'installation.
-   - **Sur Linux** : Extrayez l'archive téléchargée dans `/usr/local` ou un autre répertoire de votre choix, puis ajoutez le chemin vers le binaire de Go à votre variable d'environnement `PATH`.
+   - **Sur Windows** : Exécutez le fichier d’installation téléchargé et suivez les instructions.
+   - **Sur macOS** : Ouvrez le fichier `.pkg` téléchargé et suivez les instructions.
+   - **Sur Linux** : Extrayez l'archive téléchargée dans `/usr/local`, puis ajoutez `go/bin` à votre variable `PATH`.
 
 3. **Vérifiez l'installation** :
-   - Ouvrez un terminal ou une invite de commandes.
-   - Tapez la commande suivante pour vérifier que Go est correctement installé :
+   - Ouvrez un terminal et tapez la commande :
      ```bash
      go version
      ```
-   - Vous devriez voir la version de Go installée s'afficher.
+   - Si l’installation est correcte, la version de Go installée s'affichera.
 
-## Exécution du programme
+---
 
-Une fois Go installé, vous pouvez exécuter le programme en suivant ces étapes :
+## **Exécution du Programme**
 
-1. **Clonez ou téléchargez le dépôt** :
-   - Si vous utilisez Git, clonez le dépôt contenant le code source :
-     ```bash
-     git clone <URL_DU_DEPOT>
-     ```
-   - Sinon, téléchargez et extrayez l'archive du dépôt.
+### **1. Cloner le projet**
+Si vous utilisez Git, clonez le dépôt contenant le code source :
+```bash
+git clone https://github.com/moiroudelliott/ALongWalk.git
+cd ALongWalk
+```
+Sinon, **téléchargez et extrayez** l’archive du projet manuellement.
 
-2. **Naviguez vers le répertoire du projet** :
-   - Ouvrez un terminal ou une invite de commandes.
-   - Naviguez vers le répertoire où se trouve le fichier `main.go` :
-     ```bash
-     cd chemin/vers/le/repertoire
-     ```
+---
 
-3. **Exécutez le programme** :
-   - Pour exécuter le programme, utilisez la commande suivante :
-     ```bash
-     go run main.go final.go
-     ```
-   - Le programme vous demandera de fournir le chemin vers le fichier d'entrée du labyrinthe. Entrez le chemin complet ou relatif vers le fichier contenant la grille du labyrinthe.
-
-## Exemple d'utilisation
-
-Supposons que vous avez un fichier `labyrinthe.txt` dans le même répertoire que `main.go`. Vous pouvez exécuter le programme comme suit :
-
+### **2. Exécuter le programme**
+Dans le dossier du projet, utilisez la commande :
 ```bash
 go run main.go final.go
 ```
+Le programme vous demandera de fournir le chemin du fichier d'entrée contenant la grille du labyrinthe.
 
-Ensuite, entrez le chemin vers le fichier `labyrinthe.txt` lorsque le programme vous le demande :
+---
 
+## **Lancer les Tests et Benchmarks**
+
+### **1. Installer les dépendances**
+Si ce n'est pas déjà fait, initialisez le module Go et installez **testify** :
+```bash
+go mod init github.com/mon_utilisateur/ALongWalk  # (remplacez par votre nom d'utilisateur GitHub)
+go get github.com/stretchr/testify
+go mod tidy
 ```
-Entrez le chemin vers le fichier d'entrée du labyrinthe : labyrinthe.txt
-```
 
-Le programme lira le fichier, trouvera le chemin le plus long dans le labyrinthe, et affichera le résultat.
+
+### **2. Exécuter les benchmarks**
+```bash
+go test -bench=. -v
+```
 
 # Expliquation du problème et de sa résolution
 
