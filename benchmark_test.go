@@ -30,21 +30,21 @@ func BenchmarkOptimized(b *testing.B) {
 // Unit tests with verbose output
 func TestNaive(t *testing.T) {
 	fmt.Println("\n🔍 Running TestNaive: Testing with very small maze (input_test.txt)")
-	result := algo("input_test.txt")
+	result := algo("input_small.txt")
 	assert.Equal(t, 3, result, "Expected 3 for very small maze")
 	fmt.Println("✅ TestNaive Passed!")
 }
 
 func TestOptimized(t *testing.T) {
 	fmt.Println("\n🔍 Running TestOptimized: Testing with large maze (input_small.txt)")
-	result := algo("input_small.txt")
+	result := algo("input_large.txt")
 	assert.Equal(t, 154, result, "Expected 154 for large maze")
 	fmt.Println("✅ TestOptimized Passed!")
 }
 
 func TestLargeScale(t *testing.T) {
 	fmt.Println("\n🔍 Running TestLargeScale: Testing with a very large maze (input.txt)")
-	result := algo("input.txt")
-	assert.Equal(t, 6598, result, "Expected 6598 for a very large maze")
+	result := algo("input_very_large.txt")
+	assert.Equal(t, 155, result, "Expected 155 for a very large maze")
 	fmt.Println("✅ TestLargeScale Passed!")
 }

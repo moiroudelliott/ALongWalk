@@ -1,8 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
+
 	res := algo()
-	fmt.Printf("Longest Walk : %d", res)
+
+	startTime := time.Now()
+
+	duration := time.Since(startTime)
+
+	fmt.Printf("Longest Walk: %d\n", res)
+	fmt.Printf("Execution Time: %v\n", duration)
 }

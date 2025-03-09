@@ -63,6 +63,8 @@ go mod tidy
 go test -bench=. -v
 ```
 
+## !! Les Fichiers d'input sont crées à la main utiliser un fichier de AdventCode donnerais une meilleur vision de ce qu'un grand labyrinthe donnerais
+
 # Expliquation du problème et de sa résolution
 
 # Expliquation du problème 
