@@ -42,7 +42,7 @@ Une fois Go installé, vous pouvez exécuter le programme en suivant ces étapes
 3. **Exécutez le programme** :
    - Pour exécuter le programme, utilisez la commande suivante :
      ```bash
-     go run main.go
+     go run main.go final.go
      ```
    - Le programme vous demandera de fournir le chemin vers le fichier d'entrée du labyrinthe. Entrez le chemin complet ou relatif vers le fichier contenant la grille du labyrinthe.
 
@@ -51,7 +51,7 @@ Une fois Go installé, vous pouvez exécuter le programme en suivant ces étapes
 Supposons que vous avez un fichier `labyrinthe.txt` dans le même répertoire que `main.go`. Vous pouvez exécuter le programme comme suit :
 
 ```bash
-go run main.go
+go run main.go final.go
 ```
 
 Ensuite, entrez le chemin vers le fichier `labyrinthe.txt` lorsque le programme vous le demande :
